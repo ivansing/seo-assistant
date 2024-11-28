@@ -1,0 +1,74 @@
+#seo-container {
+    width: 300px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#analyze-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+#analyze-button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#results p {
+    margin: 5px 0;
+}
+
+#results ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#results li {
+    margin: 3px 0;
+}
+
+#keywords-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#keyword-analyze-button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#keyword-analyze-button:hover {
+    background-color: #0b7dda;
+}
+
+#keyword-results {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#keyword-results p {
+    margin: 5px 0;
+}
