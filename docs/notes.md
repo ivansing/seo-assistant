@@ -27,12 +27,16 @@
 - Use Git to track changes and collaborate.
 - Consider branching strategies for feature development.
 
+ivansing@DESKTOP-27FGUCI:~/seo-assistant$ tree -I 'node_modules'
+.
+├── README.md
 ├── background.js
 ├── dist
 │   ├── content.bundle.js
 │   └── popup.bundle.js
 ├── docs
-│   └── notes.txt
+│   ├── notes.md
+│   └── roadmap.md
 ├── icons
 │   ├── icon128.png
 │   ├── icon16.png
@@ -65,4 +69,4 @@
 │   └── popup.css
 └── webpack.config.js
 
-14 directories, 23 files
+14 directories, 25 files

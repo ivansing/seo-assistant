@@ -1,0 +1,50 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependency directories and files
+package-lock.json
+
+# Build artifacts
+*.bundle.js
+
+# IDE files
+.vscode/
+.idea/
+
+# Environment files
+.env
+
+# Generated documentation
+docs/
+*.md
+
+# Temporary files
+*.tmp
+*.swp
+
+# Miscellaneous
+*.bak
+*.orig
+
+# Webpack cache
+.cache/
+
+# Coverage reports
+coverage/
+
+# Chrome Extension specific
+seo-assistant.zip
