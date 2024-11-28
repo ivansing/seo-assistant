@@ -1,6 +1,18 @@
+/**
+ * @module KeywordModel
+ */
+
 import { escapeRegExp } from '../../utils/regexUtils.js';
 
+/**
+ * Represents the keyword model for the group
+ */
 export class KeywordModel {
+  /**
+   * 
+   * @param {string[]} keywords - An array of keywords to analyze. 
+   * @returns {Object} An object containing total words and keyword data.
+   */
   analyzeKeywords(keywords) {
     const pageText = document.body.innerText.toLowerCase();
     const totalWords = pageText.split(/\s+/).filter((word) => word.length > 0).length;

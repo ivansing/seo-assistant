@@ -1,9 +1,23 @@
+/**
+ * @module PopupView
+ */
+
+/**
+ * Handles the UI rendering for the popup.
+ */
 export class PopupView {
+  /**
+   * Creates an instance of PopupView.
+   */
     constructor() {
       this.resultsDiv = document.getElementById('results');
       this.keywordResultsDiv = document.getElementById('keyword-results');
     }
-  
+
+    /**
+     * Displays SEO analysis results in the UI.
+     * @param {Object} data - The SEO analysis data.
+     */
     displaySeoResults(data) {
       this.resultsDiv.innerHTML = `
         <p><strong>Word Count:</strong> ${data.wordCount}</p>
@@ -31,6 +45,10 @@ export class PopupView {
       `;
     }
   
+    /**
+     * Displays keyword density analysis results in the UI.
+     * @param {Oject} data - The keyword density analysis data. 
+     */
     displayKeywordResults(data) {
       const totalWords = data.totalWords;
       const keywordData = data.keywordData;
@@ -46,6 +64,11 @@ export class PopupView {
       this.keywordResultsDiv.innerHTML = resultsHTML;
     }
   
+    /**
+     * Displays an error message in the UI.
+     * @param {string} message - The error message.
+     * @param {boolean} [isKeyword=false] - Whether the error is related to keyword analysis. 
+     */
     displayError(message, isKeyword = false) {
       const targetDiv = isKeyword ? this.keywordResultsDiv : this.resultsDiv;
       targetDiv.innerHTML = `<p>Error: ${message}</p>`;

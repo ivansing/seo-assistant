@@ -1,7 +1,18 @@
+
+/**
+ * @module PopupController
+ */
+
 import { PopupModel } from '../models/PopupModel.js';
 import { PopupView } from '../views/PopupView.js';
 
+/**
+ * Controls the interaction between the popup's model and view.
+ */
 export class PopupController {
+  /**
+   * Creates an instance of PopupController.
+   */
   constructor() {
     this.model = new PopupModel();
     this.view = new PopupView();
@@ -9,6 +20,9 @@ export class PopupController {
     this.init();
   }
 
+  /**
+   * Initializes event Listeners for the popup.
+   */
   init() {
     document.getElementById('analyze-button').addEventListener('click', () => this.analyzePage());
     document
@@ -16,6 +30,9 @@ export class PopupController {
       .addEventListener('click', () => this.analyzeKeywords());
   }
 
+  /**
+   * Analyses the current webpage for SEO metrics.
+   */
   analyzePage() {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTabId = tabs[0].id;
@@ -48,6 +65,9 @@ export class PopupController {
     });
   }
 
+  /**
+   * Analyzes the density of specified keywords on the current webpage.
+   */
   analyzeKeywords() {
     const keywordsInput = document.getElementById('keywords-input').value;
     if (!keywordsInput) {

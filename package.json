@@ -4,6 +4,8 @@
   "main": "background.js",
   "scripts": {
     "built": "webpack",
+    "docs": "jsdoc -c jsdoc.json",
+    "build-docs": "npm run build && npm run docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

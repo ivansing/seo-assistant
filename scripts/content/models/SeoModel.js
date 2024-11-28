@@ -1,4 +1,16 @@
+
+/**
+ * @module SeoModel
+ */
+
+/**
+ * Represents the SEO  data model.
+ */
 export class SeoModel {
+    /**
+     * Analyses the SEO metrics of the current webpage.
+     * @returns {Object} The SEO analysis data.
+     */
     analyzeSEO() {
       const wordCount = document.body.innerText.split(/\s+/).filter((word) => word.length > 0).length;
   
