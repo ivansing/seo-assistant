@@ -185,8 +185,8 @@ For more details, refer to the `docs/` directory.
 For any inquiries, suggestions, or support, please contact:
 
 **Ivan Dev**  
-Email: [ivan.dev@example.com](mailto:ivan.dev@example.com)  
-GitHub: [@yourusername](https://github.com/yourusername)
+Email: [ivan.duarte.restrepo@gmail.com](mailto:ivan.duarte.restrepo@gmail.com)  
+GitHub: [@ivansing](https://github.com/ivansing)
 
 Happy SEO Optimizing! 🚀
 
