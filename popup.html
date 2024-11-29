@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,35 @@
 <body>
     <div id="seo-container">
         <h1>SEO Assistant</h1>
-        <button id="analyze-button">Analyze Page</button>
-        <div id="results"></div>
-        <h2>Keyword Density Analysis</h2>
-        <input id="keywords-input" type="text" placeholder="Enter keywords, separated by commas">
-        <button id="keyword-analyze-button">Analyze Keywords</button>
-        <div id="keyword-results"></div>
+        <div id="navigation-bar">
+            <button class="nav-button">Dashboard</button>
+            <button class="nav-button">Keyword Analysis</button>
+            <button class="nav-button">Competitor Analysis</button>
+            <button class="nav-button">More</button>
+        </div>
+        <div id="content">
+            <div id="summary-panel">
+                <h2>Summary Panel</h2>
+                <button id="analyze-button">Analyze Page</button>
+                <div id="results"></div>
+            </div>
+            <div id="detailed-metrics">
+                <h2>Detailed Metrics</h2>
+                <div id="graph-container">
+                    <!-- Placeholder for graph, e.g., keyword density graph -->
+                    <p>[Graph showing keyword frequency and distribution]</p>
+                </div>
+                <h2>Keyword Density Analysis</h2>
+                <input id="keywords-input" type="text" placeholder="Enter keywords, separated by commas">
+                <button id="keyword-analyze-button">Analyze Keywords</button>
+                <div id="keyword-results"></div>
+            </div>
+        </div>
+        <div id="seo-recommendations">
+            <h2>SEO Recommendations</h2>
+            <p>Consider adding more H2 headings to improve structure.</p>
+            <p>Optimize images with missing alt attributes.</p>
+        </div>
     </div>
     <script src="dist/popup.bundle.js"></script>
 </body>
