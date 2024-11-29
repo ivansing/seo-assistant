@@ -12,14 +12,24 @@ const keywordController = new KeywordController(contentView);
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   console.log('Content script received message:', request);
   if (request.action === 'analyze') {
-    const seoData = seoController.analyze();
-    contentView.displaySeoResults(seoData);
-    sendResponse(seoData);
+    try {
+      const seoData = seoController.analyze();
+      contentView.sendSeoResultsToPopup(seoData);
+      sendResponse(seoData);
+    } catch (error) {
+      contentView.sendErrorToPopup(error.message);
+      sendResponse({ error: error.message });
+    }
   } else if (request.action === 'keywordAnalysis') {
-    const keywords = request.keywords;
-    const keywordData = keywordController.analyze(keywords);
-    contentView.highlightKeywords(keywordData.keywordData);
-    sendResponse(keywordData);
+    try {
+      const keywords = request.keywords;
+      const keywordData = keywordController.analyze(keywords);
+      contentView.sendHighlightKeywords(keywordData.keywordData);
+      sendResponse(keywordData);
+    } catch (error) {
+      contentView.sendErrorToPopup(error.message);
+      sendResponse({ error: error.message });
+    }
   }
 });
 
