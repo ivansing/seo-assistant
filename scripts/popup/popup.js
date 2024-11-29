@@ -12,3 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   new PopupController();
 });
+
+// Listen for messages from the content script
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  const popupView = new PopupView();
+
+  if (request.action === 'displaySeoResults') {
+    popupView.displaySeoResults(request.data);
+  } else if (request.action === 'displayKeywordData') {
+    popupView.displayKeywordResults(request.data);
+  } else if (request.action === 'displayError') {
+    popupView.displayError(request.data.message);
+  }
+});

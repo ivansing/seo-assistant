@@ -64,14 +64,13 @@ export class PopupView {
       this.keywordResultsDiv.innerHTML = resultsHTML;
     }
   
-    /**
-     * Displays an error message in the UI.
-     * @param {string} message - The error message.
-     * @param {boolean} [isKeyword=false] - Whether the error is related to keyword analysis. 
-     */
-    displayError(message, isKeyword = false) {
-      const targetDiv = isKeyword ? this.keywordResultsDiv : this.resultsDiv;
-      targetDiv.innerHTML = `<p>Error: ${message}</p>`;
-    }
+       
+  /**
+   * Displays an error message in the UI.
+   * @param {string} message - The error message.
+   */
+  displayError(message) {
+    this.resultsDiv.innerHTML = `<p style="color: red;">Error: ${message}</p>`;
+  }
   }
   
