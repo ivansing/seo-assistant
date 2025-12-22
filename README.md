@@ -188,7 +188,7 @@ For any inquiries, suggestions, or support, please contact:
 Email: [ivan.duarte.restrepo@gmail.com](mailto:ivan.duarte.restrepo@gmail.com)  
 GitHub: [@ivansing](https://github.com/ivansing)
 
-Happy SEO Optimizing! 🚀
+Happy SEO Optimizing! 
 
 ## Additional Notes
 **Development Environment**: Developed and tested on Ubuntu using VS Code for a seamless Linux-based workflow.
