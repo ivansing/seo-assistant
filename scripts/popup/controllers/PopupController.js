@@ -83,7 +83,7 @@ export class PopupController {
       chrome.scripting.executeScript(
         {
           target: { tabId: activeTabId },
-          files: ['scripts/content/content.js'],
+          files: ['dist/content.bundle.js'],
         },
         () => {
           if (chrome.runtime.lastError) {

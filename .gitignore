@@ -39,6 +39,7 @@ docs/
 # Miscellaneous
 *.bak
 *.orig
+.claude
 
 # Webpack cache
 .cache/

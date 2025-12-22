@@ -47,7 +47,7 @@ export class PopupView {
   
     /**
      * Displays keyword density analysis results in the UI.
-     * @param {Oject} data - The keyword density analysis data. 
+     * @param {Object} data - The keyword density analysis data. 
      */
     displayKeywordResults(data) {
       const totalWords = data.totalWords;

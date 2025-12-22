@@ -49,6 +49,8 @@ export class SeoModel {
       const links = document.querySelectorAll('a[href]');
       let internalLinks = 0;
       let externalLinks = 0;
+      const currentHost = window.location.hostname;
+
       links.forEach((link) => {
         const href = link.getAttribute('href');
         if (
@@ -59,10 +61,18 @@ export class SeoModel {
           // Skip anchor, email, and telephone links
           return;
         }
-        if (href.includes(window.location.host)) {
+
+        try {
+          // Use URL constructor to properly parse relative and absolute URLs
+          const url = new URL(href, window.location.origin);
+          if (url.hostname === currentHost) {
+            internalLinks++;
+          } else {
+            externalLinks++;
+          }
+        } catch (e) {
+          // If URL parsing fails, treat as internal (likely a relative URL)
           internalLinks++;
-        } else {
-          externalLinks++;
         }
       });
   
