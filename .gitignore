@@ -40,6 +40,9 @@ docs/
 *.orig
 .claude
 
+# Private local files
+private/
+
 # Webpack cache
 .cache/
 
