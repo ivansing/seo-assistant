@@ -30,7 +30,6 @@ package-lock.json
 
 # Generated documentation
 docs/
-*.md
 
 # Temporary files
 *.tmp
